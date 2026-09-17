@@ -107,7 +107,7 @@ if st.session_state.authenticated:
 else:
     choix = st.sidebar.radio("Aller vers :", [
         "1. Inscription & Badges", 
-        "3. Espace Élève/Parents"
+        "2. Espace Élève/Parents"
     ], key="menu_public")
 
 # Fonction de génération du PDF
@@ -167,11 +167,11 @@ if choix == "1. Inscription & Badges":
         prenom = st.text_input("Prénom")
         sexe = st.selectbox("Sexe", ["Homme", "Femme"])
         
-        liste_classes = ["7ème", "8ème", "1ère", "2ème", "3ème"]
+        liste_classes = ["7ème", "8ème", "1ère", "2ème", "3ème","4ème"]
         classe = st.selectbox("Niveau / Classe", liste_classes)
         
         option = "Aucune"
-        if classe in ["1ère", "2ème", "3ème"]:
+        if classe in ["1ère", "2ème", "3ème","4ème"]:
             liste_options = [
                 "Littéraire", "Scientifique", "Commerciale et gestion", 
                 "Pédagogie", "Coupe couture", "Électricité", "Électronique", "Mécanique"
@@ -264,7 +264,7 @@ elif choix == "2. Scanner de Présence":
         """, unsafe_allow_html=True)
 
 # --- MENU 3 : ESPACE ÉLÈVE / PARENTS ---
-elif choix == "3. Espace Élève/Parents":
+elif choix == "2. Espace Élève/Parents":
     st.markdown("""
         <div class="hero-box">
             <h2>🔍 Espace de Consultation - Élèves & Parents</h2>
