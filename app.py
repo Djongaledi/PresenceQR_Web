@@ -250,7 +250,7 @@ elif choix == "2. Scanner de Présence":
             succes_p, message_p = enregistrer_presence(scanned_code)
             if succes_p:
                 st.success(message_p)
-           else:
+               else:
                 st.warning(message_p) 
                if "déjà pointé" in message_p 
         else st.error(message_p)
