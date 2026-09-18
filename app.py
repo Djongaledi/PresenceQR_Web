@@ -252,9 +252,9 @@ elif choix == "2. Scanner de Présence":
                 st.success(message_p)
             else:
                 if "déjà pointé" in message_p: 
-                st.warning(message_p)
-        else:
-            st.error(message_p)
+                    st.warning(message_p)
+            else:
+                st.error(message_p)
             
     with col_sc2:
         st.markdown("""
